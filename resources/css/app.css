@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+@import 'aos/dist/aos.css';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+
+@theme {
+    /* Standar Nasional Tipografi Digital: Plus Jakarta Sans */
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+    --color-gumer-dark: #2C1810;
+    --color-gumer-primary: #5C3317;
+    --color-gumer-clay: #8C532B;
+    --color-gumer-amber: #C87D20;
+    --color-gumer-forest: #1B3B2B;
+    --color-gumer-cream: #FAF6EE;
+    --color-gumer-surface: #FFFFFF;
+    --color-gumer-border: #E8DFD1;
+    --color-gumer-subtle: #7A695C;
+}
+
+/* Tipografi Global Ergonomis & Nyaman Dibaca */
+html {
+    font-family: var(--font-sans);
+    letter-spacing: -0.015em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--color-gumer-dark);
+    background-color: var(--color-gumer-cream);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #FAF6EE;
+}
+::-webkit-scrollbar-thumb {
+    background: #C87D20;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #5C3317;
+}
+
+/* Taste-Skill Utility Accents */
+.gumer-border-tactile {
+    border: 1px solid rgba(232, 223, 209, 0.9);
+}
+
+.gumer-card-hover {
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.gumer-card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px -6px rgba(44, 24, 16, 0.1);
+}
